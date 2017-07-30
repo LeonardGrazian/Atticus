@@ -1,0 +1,26 @@
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("https://s-media-cache-ak0.pinimg.com/originals/14/9e/56/149e566fa9124289fb9d699fbcb269e7.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.p{
+/*    text-decoration: white;*/
+    text-decoration-color: white;
+    color: white;
+}
+.text{
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.nav-link{
+    color: greenyellow;
+}
