@@ -9,16 +9,16 @@ angular.
         $routeProvider.
           // landing page
           when('/', {
-            templateURL: 'view1/view1.html'
+            templateURL: 'landing_view/landing_view.html'
           }).
           // login page
           when('/login', {
-            template: 'view1/view1.html'
+            template: 'login_view/login_view.html'
           }).
           //about page
-          when('/about', {
-            template: 'view2,view2.html'
+          when('/home', {
+            template: 'home_view/home_view.html'
           }),
           // else default to landing page
-          otherwise('/')
+          otherwise('/');
       }]);
