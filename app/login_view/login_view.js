@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appView', ['ngRoute'])
-  .controller('loginCtrl', [function() {
+angular.module('loginView', ['ngRoute'])
+  .controller('LoginCtrl', [function() {
 
   }]);
