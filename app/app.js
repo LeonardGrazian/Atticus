@@ -1,9 +1,15 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('atticus', [
+angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
-  'myApp.view2',
+  'view2',
+  'landing',
   'myApp.version'
-])
+]).
+config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  $locationProvider.hashPrefix('!');
+
+  //$routeProvider.otherwise({redirectTo: '/view1'});
+}]);

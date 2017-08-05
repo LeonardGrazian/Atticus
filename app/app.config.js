@@ -1,24 +1,27 @@
 'use strict';
 
-angular.
-  module('atticus').
-    config(['$locationProvider, $routeProvider',
-      function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
+angular.module('myApp')
+  .config(['$locationProvider', '$routeProvider',
+    function($locationProvider, $routeProvider) {
+      $locationProvider.hashPrefix('!');
 
-        $routeProvider.
-          // landing page
-          when('/', {
-            templateURL: 'landing_view/landing_view.html'
-          }).
-          // login page
-          when('/login', {
-            template: 'login_view/login_view.html'
-          }).
-          //about page
-          when('/home', {
-            template: 'home_view/home_view.html'
-          }),
-          // else default to landing page
-          otherwise('/');
-      }]);
+      $routeProvider
+        // landing page
+        .when('/landing', {
+          templateUrl: 'landing_view/landing_view.html',
+          controller: 'LandingCtrl'
+        })
+        // view 1
+        .when('/view1', {
+          templateUrl: 'view1/view1.html',
+          controller: 'View1Ctrl'
+        })
+        // view 2
+        .when('/view2', {
+          templateUrl: 'view2/view2.html',
+          controller: 'View2Ctrl'
+        })
+        // else
+        .otherwise('/landing');
+  }
+]);
